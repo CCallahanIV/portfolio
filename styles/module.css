@@ -1,0 +1,74 @@
+.headWrap{
+  float: left;
+  width: 100%;
+}
+
+.icon-menu{
+  float: left;
+}
+
+.siteLinks{
+  float: left;
+}
+
+.siteLinks ul{
+  display: none;
+}
+
+.siteLinks:hover ul{
+  display: block;
+}
+
+.socialLinks{
+  float: right;
+}
+
+.socialLinks li{
+  display: inline;
+}
+
+.portfolioList li{
+  display: inline-block;
+}
+
+.portItem{
+  padding: 20px;
+}
+
+.portLink{
+  display: block;
+  height: 20px;
+  width: 170px;
+  background-color: black;
+  border-radius: 3px;
+  line-height:12px;
+  padding-top:100px;
+  padding-right: 10px;
+  color: white;
+  text-align: right;
+}
+
+.portLink:hover{
+  background-color: lightgrey;
+  color: black;
+}
+
+.captionText{
+  text-align: center;
+  width: 180px;
+}
+
+@media screen and (min-width: 760px){
+  .siteLinks ul{
+    display: block;
+  }
+
+  .siteLinks li{
+    display: inline;
+  }
+
+  .icon-menu{
+    display: none;
+  }
+
+}

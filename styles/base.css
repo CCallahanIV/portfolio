@@ -1,0 +1,17 @@
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  border-bottom: 1px solid;
+}
+
+.headWrap{
+  border-bottom: 1px solid;
+}
