@@ -19,12 +19,34 @@
   display: block;
 }
 
+.siteLink{
+  display: inline-block;
+  width: 60px;
+  height: 20px;
+  line-height: 20px;
+  padding-top: 4px;
+  padding-left: 4px;
+  background-color: black;
+  color: white;
+
+}
+
+.siteLink:hover{
+  background-color: lightgrey;
+  color: black;
+}
+
 .socialLinks{
   float: right;
 }
 
 .socialLinks li{
   display: inline;
+}
+
+.portfolioList ul{
+  width: 100%;
+  margin-left: auto;
 }
 
 .portfolioList li{
@@ -54,8 +76,8 @@
 }
 
 .captionText{
-  text-align: center;
   width: 180px;
+  padding-bottom: 20px;
 }
 
 @media screen and (min-width: 760px){
