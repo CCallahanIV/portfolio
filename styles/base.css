@@ -12,6 +12,20 @@ header{
   border-bottom: 1px solid;
 }
 
+body{
+  background-color: lightgrey;
+}
+
 .headWrap{
   border-bottom: 1px solid;
+}
+
+.portLink, .siteLink{
+  font-family: 'Share Tech Mono', serif;
+  font-size: 1.5em;
+}
+
+.resTitle a{
+  font-family: 'Share Tech Mono', serif;
+  font-size: 1.5em;
 }

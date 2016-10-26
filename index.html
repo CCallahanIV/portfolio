@@ -9,33 +9,35 @@
     <link rel="stylesheet" href="styles/base.css">
     <link rel="stylesheet" href="styles/layout.css">
     <link rel="stylesheet" href="styles/module.css">
-
+    <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
       <div class="headWrap">
         <h1 class="head">TED'S PORTFOLIO</h1>
-        <nav class="siteLinks">
-        <div class="icon-menu"><span>NAV</span></div>
-          <ul>
-            <li><a class="siteLink" href="#">Link 1</a></li>
-            <li><a class="siteLink" href="#">Link 2</a></li>
-            <li><a class="siteLink" href="#">Link 3</a></li>
-            <li><a class="siteLink" href="#">Link 4</a></li>
-          </ul>
-        </nav>
-        <nav class="socialLinks">
-          <ul>
-            <li><a href="#">F</a></li>
-            <li><a href="#">G</a></li>
-          </ul>
-        </nav>
+        <div class="navWrap">
+          <nav class="siteLinks">
+            <div class="icon-menu"><span>NAV</span></div>
+            <ul>
+              <li><a class="siteLink" href="#">Link 1</a></li>
+              <li><a class="siteLink" href="#">Link 2</a></li>
+              <li><a class="siteLink" href="#">Link 3</a></li>
+              <li><a class="siteLink" href="#">Link 4</a></li>
+            </ul>
+          </nav>
+          <nav class="socialLinks">
+            <ul>
+              <li><a class="socialLink" href="#"><img src="vendor/images/FB-f-Logo__blue_29.png"/></a></li>
+              <li><a class="socialLink" href="#"><img id="gitIcon" src="vendor/images/GitHub-Mark-Light-32px.png"/></a></li>
+            </ul>
+          </nav>
+        </div>
       </div>
     </header>
 
     <section class="mainContent">
-      <p>A list of portfolio items.</p>
       <div class="listWrapper">
+        <p>A list of portfolio items.</p>
         <ul class="portfolioList">
           <li class="portItem"><a class="portLink" href="#">Item1</a><p class="captionText">Text describing the link. lorem ipsum stuff</p></li>
           <li class="portItem"><a class="portLink" href="#">Item2</a><p class="captionText">Link 1</p></li>
@@ -45,8 +47,25 @@
           <li class="portItem"><a class="portLink" href="#">Item6</a><p class="captionText">Link 1</p></li>
         </ul>
       </div>
+      <div class="resourceWrapper">
+        <ul>
+          <li class="template">
+            <p class="resTitle"><span class="resIcon"></span>
+              <a href="">This is the Title of the resource</a></p>
+            <p class="resDesc">This is the description</p>
+          </li>
+        </ul>
+      </div>
 
     </section>
+
+    <script
+  src="https://code.jquery.com/jquery-3.1.1.min.js"
+  integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+  crossorigin="anonymous"></script>
+  <script src="scripts/nav.js"></script>
+  <script src="scripts/resourceContainer.js"></script>
+  <script src="scripts/resource.js"></script>
   </body>
 
 </html>

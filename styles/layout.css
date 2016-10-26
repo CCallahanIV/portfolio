@@ -1,5 +1,36 @@
 .mainContent{
-  padding-top: 60px;
-  max-width: 800px;
+  width: 90%;
   margin: auto;
+  background-color: white;
+}
+
+.headWrap{
+  width: 80%;
+  margin: auto;
+  background-color: black;
+}
+
+.head{
+  text-align: center;
+  font-size: 2.0em;
+  padding-bottom: 10px;
+  color: white;
+}
+
+.navWrap, .resourceWrapper{
+  width: 80%;
+  margin: auto;
+}
+
+.listWrapper, .portfolioList{
+  width: 100%
+  margin: auto;
+}
+
+.template {
+  display: none;
+}
+
+.resDesc{
+  padding-left: 20px;
 }

@@ -4,31 +4,32 @@
 }
 
 .icon-menu{
-  float: left;
+  font-size: 1.5em;
+  color: white;
+}
+
+.icon-menu:hover{
+  background-color: white;
+  color: black;
 }
 
 .siteLinks{
-  float: left;
+  display: inline-block;
+  width: 80%;
 }
 
 .siteLinks ul{
   display: none;
 }
 
-.siteLinks:hover ul{
-  display: block;
-}
-
 .siteLink{
   display: inline-block;
-  width: 60px;
-  height: 20px;
+  width: 24%;
+  height: 30px;
   line-height: 20px;
-  padding-top: 4px;
-  padding-left: 4px;
+  padding-top: 10px;
   background-color: black;
   color: white;
-
 }
 
 .siteLink:hover{
@@ -37,7 +38,8 @@
 }
 
 .socialLinks{
-  float: right;
+  display:  inline-block;
+  width: 15%
 }
 
 .socialLinks li{
@@ -46,7 +48,6 @@
 
 .portfolioList ul{
   width: 100%;
-  margin-left: auto;
 }
 
 .portfolioList li{
@@ -80,6 +81,21 @@
   padding-bottom: 20px;
 }
 
+#gitIcon{
+  background-color: black;
+}
+
+.resItem{
+  margin: 0;
+  padding-bottom: 20px;
+}
+
+.resTitle{
+  padding-bottom: 5px;
+}
+
+
+
 @media screen and (min-width: 760px){
   .siteLinks ul{
     display: block;
@@ -92,5 +108,16 @@
   .icon-menu{
     display: none;
   }
+}
 
+@media screen and (min-width: 1000px){
+  .listWrapper{
+    width: 60%;
+    display: inline-block;
+    border-right: 1px solid;
+  }
+  .resourceWrapper{
+    width: 39%;
+    display: inline-block;
+  }
 }
