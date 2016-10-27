@@ -15,11 +15,15 @@
 
 .siteLinks{
   display: inline-block;
-  width: 80%;
+  width: 79%;
 }
 
 .siteLinks ul{
   display: none;
+}
+
+.siteLinks li{
+  display: block;
 }
 
 .siteLink{
@@ -39,18 +43,30 @@
 
 .socialLinks{
   display:  inline-block;
-  width: 15%
+  width: 20%;
+}
+
+.socialLinks ul{
+  display: inline-block;
+  width: 100%;
 }
 
 .socialLinks li{
   display: inline;
+  width: 49%;
+}
+
+.socialLink{
+  display: inline;
+  height: 30px;
+  width: 100%;
 }
 
 .portfolioList ul{
   width: 100%;
 }
 
-.portfolioList li{
+.portfolioList li.portItem{
   display: inline-block;
 }
 
@@ -85,6 +101,11 @@
   background-color: black;
 }
 
+.socialImgLink{
+  height: 30px;
+  width: 30px;
+}
+
 .resItem{
   margin: 0;
   padding-bottom: 20px;
@@ -94,15 +115,19 @@
   padding-bottom: 5px;
 }
 
-
+.resourceWrapper ul{
+  width: 80%;
+  margin: auto;
+}
 
 @media screen and (min-width: 760px){
   .siteLinks ul{
-    display: block;
+    display: inline-block;
   }
 
   .siteLinks li{
     display: inline;
+    width: 24%;
   }
 
   .icon-menu{
@@ -112,13 +137,19 @@
 
 @media screen and (min-width: 1000px){
   .listWrapper{
-    width: 60%;
+    width: 65%;
     display: inline-block;
     border-right: 1px solid;
+    margin-top: 0px;
+    margin-right: 2px;
   }
   .resourceWrapper{
-    width: 39%;
+    width: 32%;
     display: inline-block;
     margin-top: 0px;
   }
+}
+
+.template{
+  display: none;
 }

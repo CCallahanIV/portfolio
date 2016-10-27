@@ -6,12 +6,13 @@ var resources = [];
 function Resource (options){
   this.resTitle = options.resTitle;
   this.resUrl = options.resUrl;
+  this.resCat = options.resCat;
   this.resDesc = options.resDesc;
   this.resIcon = options.resIcon;
 }
 
 Resource.prototype.toHtml = function(){
-  var $newResource = $('li.template').clone();
+  var $newResource = $('.resourceWrapper li.template').clone();
 
   $newResource.find('a').text(this.resTitle);
   $newResource.find('a').attr('href',this.resUrl);

@@ -1,13 +1,17 @@
 $('document').ready( function (){
+  var $ulNav = $('nav.siteLinks > ul');
 
   $('.icon-menu').on('click', function(){
-    var $ulNav = $('nav.siteLinks > ul');
-
     $ulNav.slideToggle('fast');
-
-    if($ulNav.attr('style')==='display: none;'){
-      $ulNav.removeAttr('style');
-    }
-
   });
+
+  $(window).resize(function(){
+    
+    if($(window).width() >= 760){
+      $ulNav.css('display','inline');
+    } else {
+      $ulNav.css('display','none');
+    }
+  });
+
 });

@@ -19,16 +19,16 @@
           <nav class="siteLinks">
             <div class="icon-menu"><span>NAV</span></div>
             <ul>
-              <li><a class="siteLink" href="#">Link 1</a></li>
-              <li><a class="siteLink" href="#">Link 2</a></li>
+              <li><a class="siteLink" href="#">Home</a></li>
+              <li><a class="siteLink" href="#">About</a></li>
               <li><a class="siteLink" href="#">Link 3</a></li>
               <li><a class="siteLink" href="#">Link 4</a></li>
             </ul>
           </nav>
           <nav class="socialLinks">
             <ul>
-              <li><a class="socialLink" href="#"><img src="vendor/images/FB-f-Logo__blue_29.png"/></a></li>
-              <li><a class="socialLink" href="#"><img id="gitIcon" src="vendor/images/GitHub-Mark-Light-32px.png"/></a></li>
+              <li><a class="socialLink" href="#"><img class="socialImgLink" src="vendor/images/FB-f-Logo__blue_29.png"/></a></li>
+              <li><a class="socialLink" href="#"><img class="socialImgLink" id="gitIcon" src="vendor/images/GitHub-Mark-Light-32px.png"/></a></li>
             </ul>
           </nav>
         </div>
@@ -37,14 +37,17 @@
 
     <section class="mainContent">
       <div class="listWrapper">
-        <p>A list of portfolio items.</p>
+        <h2>A list of portfolio items.</h2>
+        <div class="template">
+          <article class="portPreview">
+            <h2>Title</h2>
+            <h4>Category: <span class="portListCat">cat</span></h4>
+            <p class="portListDesc">Desc</p>
+          </article>
+          <a class="icon-minus" href="#">CLOSE</a>
+        </div>
         <ul class="portfolioList">
-          <li class="portItem"><a class="portLink" href="#">Item1</a><p class="captionText">Text describing the link. lorem ipsum stuff</p></li>
-          <li class="portItem"><a class="portLink" href="#">Item2</a><p class="captionText">Link 1</p></li>
-          <li class="portItem"><a class="portLink" href="#">Item3</a><p class="captionText">Link 1</p></li>
-          <li class="portItem"><a class="portLink" href="#">Item4</a><p class="captionText">Link 1</p></li>
-          <li class="portItem"><a class="portLink" href="#">Item5</a><p class="captionText">Link 1</p></li>
-          <li class="portItem"><a class="portLink" href="#">Item6</a><p class="captionText">Link 1</p></li>
+          <li class="template"><a class="portLink" href="#"></a></li>
         </ul>
       </div>
       <div class="resourceWrapper">
@@ -56,7 +59,6 @@
           </li>
         </ul>
       </div>
-
     </section>
 
     <script
@@ -66,6 +68,8 @@
   <script src="scripts/nav.js"></script>
   <script src="scripts/resourceContainer.js"></script>
   <script src="scripts/resource.js"></script>
+  <script src="scripts/listContainer.js"></script>
+  <script src="scripts/portList.js"></script>
   </body>
 
 </html>
