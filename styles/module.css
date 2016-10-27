@@ -119,5 +119,6 @@
   .resourceWrapper{
     width: 39%;
     display: inline-block;
+    margin-top: 0px;
   }
 }

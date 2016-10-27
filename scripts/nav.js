@@ -1,9 +1,13 @@
 $('document').ready( function (){
 
   $('.icon-menu').on('click', function(){
-    $('nav.siteLinks > ul').slideToggle('fast',function(){
-      console.log('Did a thing.');
-    });
-  });
+    var $ulNav = $('nav.siteLinks > ul');
 
+    $ulNav.slideToggle('fast');
+
+    if($ulNav.attr('style')==='display: none;'){
+      $ulNav.removeAttr('style');
+    }
+
+  });
 });
