@@ -12,16 +12,10 @@ function Resource (options){
 }
 
 Resource.prototype.toHtml = function(){
-  var $newResource = $('.resourceWrapper li.template').clone();
+  var source = $('#resList-template').html();
+  var templateRender = Handlebars.compile(source);
 
-  $newResource.find('a').text(this.resTitle);
-  $newResource.find('a').attr('href',this.resUrl);
-  $newResource.find('p.resDesc').html(this.resDesc);
-  $newResource.find('span.resIcon').removeClass('resIcon').addClass(this.resIcon);
-
-  $newResource.removeClass('template').addClass('resItem');
-
-  return $newResource;
+  return templateRender(this);
 };
 
 resContainer.forEach(function(ele) {

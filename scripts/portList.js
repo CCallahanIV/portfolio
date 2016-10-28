@@ -13,27 +13,22 @@ function PortListItem (options){
 }
 
 PortListItem.prototype.toListHtml = function(){
-  var $newPortListItem = $('.portfolioList li.template').clone();
-
-  $newPortListItem.find('a').attr('href',this.portListUrl);
-  $newPortListItem.find('a').text(this.portListTitle);
-
-  $newPortListItem.removeClass('template').addClass('portItem');
-
-  return $newPortListItem;
+  var source = $('#portList-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
 PortListItem.prototype.toArticleHtml = function(){
-  var $newPortArticleItem = $('.listWrapper div.template');
-
-
-  return $newPortArticleItem;
+  var source = $('#portArticle-template').html();
+  var templateRender = Handlebars.compile(source);
+  return templateRender(this);
 };
 
 portListContainer.forEach(function(ele) {
   portListArray.push(new PortListItem(ele));
 });
 
-portListArray.forEach(function(resource){
-  $('div.listWrapper > ul').append(resource.toListHtml());
+portListArray.forEach(function(portItem){
+  $('div#portArticle').append(portItem.toArticleHtml());
+  $('ul#portList').append(portItem.toListHtml());
 });

@@ -11,7 +11,28 @@
     <link rel="stylesheet" href="styles/module.css">
     <link href='https://fonts.googleapis.com/css?family=Share+Tech+Mono' rel='stylesheet' type='text/css'>
 
-    <script id="portArticle-template" type="text/x-handlebars"
+    <script id="portArticle-template" type="text/x-handlebars-template">
+      <article data-title="{{portListTitle}}" class="portPreview">
+        <h2><a href="{{portListUrl}}">{{portListTitle}}</a></h2>
+        <h4>Category: <span class="portListCat">{{portListCat}}</span></h4>
+        <p class="portListDesc">{{portListDesc}}</p>
+        <a class="icon-minus" href="#"> CLOSE</a>
+      </article>
+    </script>
+    <script id="portList-template" type="text/x-handlebars-template">
+      <li class="portItem" data-cat="{{portListCat}}"><a class="portLink" href="{{portListUrl}}">{{portListTitle}}</a></li>
+    </script>
+    <script id="resList-template" type="text/x-handlebars-template">
+      <li class="resItem">
+        <p class="resTitle"><span class="{{resIcon}}"></span>
+          <a href="{{resUrl}}">{{resTitle}}</a></p>
+        <p class="category">Category: {{resCat}}</p>
+        <p class="resDesc">{{{resDesc}}}</p>
+      </li>
+    </script>
+    <script id="listCatFilter-template" type="text/x-handlebars-template">
+      <option value="{{portListCat}}">{{portListCat}}</option>
+    </script>
 
   </head>
   <body>
@@ -22,8 +43,8 @@
           <nav class="siteLinks">
             <div class="icon-menu"><span>NAV</span></div>
             <ul>
-              <li><a class="siteLink" href="#">Home</a></li>
-              <li><a class="siteLink" href="#">About</a></li>
+              <li><a class="siteLink tab" href="#">Home</a></li>
+              <li><a class="siteLink tab" href="#">About</a></li>
               <li><a class="siteLink" href="#">Link 3</a></li>
               <li><a class="siteLink" href="#">Link 4</a></li>
             </ul>
@@ -39,31 +60,32 @@
     </header>
 
     <section class="mainContent">
-      <div class="listWrapper">
-        <h2>A list of portfolio items.</h2>
-        <div class="template">
-          <article class="portPreview">
-            <h2>Title</h2>
-            <h4>Category: <span class="portListCat">cat</span></h4>
-            <p class="portListDesc">Desc</p>
-          </article>
-          <a class="icon-minus" href="#">CLOSE</a>
-        </div>
+      <div class="tabContent" data-tab="home">
+        <div class="listWrapper">
+          <h2>A list of portfolio items.</h2>
+          <select id="listCatFilter">
+            <option value="">Filter by Category</option>
+            <option value="all">Show All</option>
+          </select>
+          <div id="portArticle" class="article">
 
-        <ul class="portfolioList">
-          <li class="template"><a class="portLink" href="#"></a></li>
-        </ul>
+          </div>
+
+          <ul id="portList" class="portfolioList">
+            <li class="template"><a class="portLink" href="#"></a></li>
+          </ul>
+        </div>
+        <div class="resourceWrapper">
+          <ul>
+
+          </ul>
+        </div>
       </div>
-      <div class="resourceWrapper">
-        <ul>
-          <li class="template">
-            <p class="resTitle"><span class="resIcon"></span>
-              <a href="">This is the Title of the resource</a></p>
-            <p class="resDesc">This is the description</p>
-          </li>
-        </ul>
+      <div class="tabContent" data-tab="about">
+        <p>ABOOT ME, EH</p>
       </div>
     </section>
+
 
     <script
   src="https://code.jquery.com/jquery-3.1.1.min.js"
@@ -75,6 +97,7 @@
   <script src="scripts/resource.js"></script>
   <script src="scripts/listContainer.js"></script>
   <script src="scripts/portList.js"></script>
+  <script src="scripts/portView.js"></script>
   </body>
 
 </html>
