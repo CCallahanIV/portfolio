@@ -2,6 +2,7 @@
 /*resource templating logic*/
 
 var portListArray = [];
+var portArticleArray = [];
 
 /*constructor for PortListItem object*/
 function PortListItem (options){
@@ -11,7 +12,7 @@ function PortListItem (options){
   this.portListDesc = options.portListDesc;
 }
 
-PortListItem.prototype.toHtml = function(){
+PortListItem.prototype.toListHtml = function(){
   var $newPortListItem = $('.portfolioList li.template').clone();
 
   $newPortListItem.find('a').attr('href',this.portListUrl);
@@ -22,10 +23,17 @@ PortListItem.prototype.toHtml = function(){
   return $newPortListItem;
 };
 
+PortListItem.prototype.toArticleHtml = function(){
+  var $newPortArticleItem = $('.listWrapper div.template');
+
+
+  return $newPortArticleItem;
+};
+
 portListContainer.forEach(function(ele) {
   portListArray.push(new PortListItem(ele));
 });
 
 portListArray.forEach(function(resource){
-  $('div.listWrapper > ul').append(resource.toHtml());
+  $('div.listWrapper > ul').append(resource.toListHtml());
 });
