@@ -6,20 +6,13 @@ var portArticleArray = [];
 
 /*constructor for PortListItem object*/
 function PortListItem (options){
-  this.portListTitle = options.portListTitle;
-  this.portListUrl = options.portListUrl;
-  this.portListCat = options.portListCat;
-  this.portListDesc = options.portListDesc;
-}
-
-PortListItem.prototype.toListHtml = function(){
-  var source = $('#portList-template').html();
-  var templateRender = Handlebars.compile(source);
-  return templateRender(this);
+  for (key in options){
+    this[key] = options[key];
+  }
 };
 
-PortListItem.prototype.toArticleHtml = function(){
-  var source = $('#portArticle-template').html();
+PortListItem.prototype.toHtml = function(template){
+  var source = $(template).html();
   var templateRender = Handlebars.compile(source);
   return templateRender(this);
 };
@@ -29,6 +22,6 @@ portListContainer.forEach(function(ele) {
 });
 
 portListArray.forEach(function(portItem){
-  $('div#portArticle').append(portItem.toArticleHtml());
-  $('ul#portList').append(portItem.toListHtml());
+  $('div#portArticle').append(portItem.toHtml('#portArticle-template'));
+  $('ul#portList').append(portItem.toHtml('#portList-template'));
 });

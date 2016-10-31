@@ -1,4 +1,4 @@
-$('document').ready( function (){
+$(document).ready( function (){
   var $ulNav = $('nav.siteLinks > ul');
 
   $('.icon-menu').on('click', function(){
@@ -6,7 +6,7 @@ $('document').ready( function (){
   });
 
   $(window).resize(function(){
-    
+
     if($(window).width() >= 760){
       $ulNav.css('display','inline');
     } else {

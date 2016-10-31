@@ -8,8 +8,7 @@ portArticleView.handlePreview = function(){
   $('#portList').on('click', 'a' , function(e){
     /*TODO: Add conditional statement to prevent opening another port article if one is already open. */
     e.preventDefault();
-    var title = $(this).text();
-    $('article[data-title="' + title + '"]').slideToggle();
+    $('article[data-title="' + $(this).text() + '"]').slideToggle();
   });
 
   $('article.portPreview').on('click', 'a.icon-minus', function(e){
@@ -22,10 +21,8 @@ portArticleView.handleMainNav = function(){
   $('.siteLinks').on('click', '.tab', function(e){
     e.preventDefault();
 
-    var tab = $(this).text().toLowerCase();
-    console.log('div[data-tab="' + tab + '"]');
     $('.tabContent').hide();
-    $('div[data-tab="' + tab + '"]').fadeIn();
+    $('div[data-tab="' + $(this).text().toLowerCase() + '"]').fadeIn();
   });
 
   $('.siteLinks .tab:first').click();
@@ -53,8 +50,6 @@ portArticleView.handleCatFilter = function(){
   $('#listCatFilter').on('change', function(){
 
     if($(this).val()) {
-
-
       $('.portItem').hide();
       $('.portItem[data-cat="' + $(this).val() + '"]').fadeIn();
     } else {
@@ -64,8 +59,6 @@ portArticleView.handleCatFilter = function(){
     if ($(this).val() === 'all') {
       $('.portItem').show();
     }
-
-    $('#listCatFilter').val('');
 
   });
 };

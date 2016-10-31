@@ -4,12 +4,10 @@ var resources = [];
 
 /*constructor for Resource object*/
 function Resource (options){
-  this.resTitle = options.resTitle;
-  this.resUrl = options.resUrl;
-  this.resCat = options.resCat;
-  this.resDesc = options.resDesc;
-  this.resIcon = options.resIcon;
-}
+  for (key in options){
+    this[key] = options[key];
+  }
+};
 
 Resource.prototype.toHtml = function(){
   var source = $('#resList-template').html();
