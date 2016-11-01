@@ -20,8 +20,12 @@ PortListItem.loadAll = function(inputData) {
   inputData.forEach(function(ele){
     PortListItem.portListArray.push(new Resource(ele));
   });
-  renderObject(PortListItem.portListArray,'div#portArticle', '#portArticle-template');
-  renderObject(PortListItem.portListArray,'ul#portList', '#portList-template');
+  portArticleView.renderObject(PortListItem.portListArray,'div#portArticle', '#portArticle-template');
+  portArticleView.renderObject(PortListItem.portListArray,'ul#portList', '#portList-template');
+  portArticleView.handlePreview();
+  portArticleView.handleMainNav();
+  portArticleView.populateFilter();
+  portArticleView.handleCatFilter();
 };
 
 PortListItem.fetchAll = function() {
@@ -52,13 +56,3 @@ PortListItem.fetchAll = function() {
     loadFromJson();
   }
 };
-
-// portListContainer.forEach(function(ele) {
-//   portListArray.push(new PortListItem(ele));
-// });
-
-//
-// portListArray.forEach(function(portItem){
-//   $('div#portArticle').append(portItem.toHtml('#portArticle-template'));
-//   $('ul#portList').append(portItem.toHtml('#portList-template'));
-// });

@@ -20,7 +20,7 @@ Resource.loadAll = function(inputData) {
   inputData.forEach(function(ele){
     Resource.resources.push(new Resource(ele));
   });
-  renderObject(Resource.resources,'div.resourceWrapper > ul','#resList-template');
+  portArticleView.renderObject(Resource.resources,'div.resourceWrapper > ul','#resList-template');
 };
 
 Resource.fetchAll = function() {
@@ -51,12 +51,3 @@ Resource.fetchAll = function() {
     loadFromJson();
   }
 };
-
-
-// resContainer.forEach(function(ele) {
-//   resources.push(new Resource(ele));
-// });
-
-// resources.forEach(function(resource){
-//   $('div.resourceWrapper > ul').append(resource.toHtml());
-// });
