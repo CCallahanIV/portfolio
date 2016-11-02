@@ -26,6 +26,7 @@ PortListItem.loadAll = function(inputData) {
   portArticleView.handleMainNav();
   portArticleView.populateFilter();
   portArticleView.handleCatFilter();
+  portArticleView.renderFunFacts();
 };
 
 PortListItem.fetchAll = function() {
@@ -55,4 +56,27 @@ PortListItem.fetchAll = function() {
   } else {
     loadFromJson();
   }
+};
+//return int of with total categories
+PortListItem.uniqueCats = function(){
+  return PortListItem.portListArray.map(function(portListItem){
+    return portListItem.portListCat;
+  }).reduce(function(acc, cur, idx, array){
+    if(array.indexOf(cur) === idx){
+      acc.push(cur);
+    }
+    return acc;
+  },[]);
+};
+
+//Returns array of objects with category name and number of projects in that category.
+PortListItem.numCats = function(){
+  return PortListItem.uniqueCats().map(function(category){
+    return {
+      category: category,
+      numProjects: PortListItem.portListArray.filter(function(element){
+        return element.portListCat === category;
+      }).length
+    };
+  });
 };

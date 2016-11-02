@@ -33,6 +33,9 @@
     <script id="listCatFilter-template" type="text/x-handlebars-template">
       <option value="{{portListCat}}">{{portListCat}}</option>
     </script>
+    <script id="funFacts-template" type="text/x-handlebars-template">
+      <li>{{category}}: {{numProjects}} Projects</li>
+    </script>
 
   </head>
   <body>
@@ -85,6 +88,13 @@
         <p>ABOOT ME, EH</p>
       </div>
     </section>
+    <footer>
+      <h2>Fun Facts:</h2>
+      <p>There are <span id="numCats"></span> categories.</p>
+      <ul id="funFacts">
+
+      </ul>
+    </footer>
 
   <!-- VENDOR SCRIPTS -->
   <script
@@ -99,6 +109,7 @@
   <script src="scripts/view/nav.js"></script>
   <script src="scripts/view/portView.js"></script>
   <script src="scripts/view/renderObject.js"></script>
+  <script src="scripts/view/funFacts.js"></script>
   </body>
 
 </html>
