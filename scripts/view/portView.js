@@ -63,7 +63,5 @@ portArticleView.handleCatFilter = function(){
   });
 };
 
-portArticleView.handlePreview();
-portArticleView.handleMainNav();
-portArticleView.populateFilter();
-portArticleView.handleCatFilter();
+PortListItem.fetchAll();
+Resource.fetchAll();
