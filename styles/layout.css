@@ -18,7 +18,7 @@
 }
 
 .navWrap{
-  width: 80%;
+  width: 100%;
   margin: auto;
 }
 
@@ -27,10 +27,6 @@
   margin: auto;
   padding-top: 10px;
   vertical-align: top;
-}
-
-.template {
-  display: none;
 }
 
 .resDesc{
