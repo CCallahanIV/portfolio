@@ -1,5 +1,5 @@
 /*resource templating logic*/
-
+(function(module){
   /*constructor for Resource object*/
   function Resource (options){
     for (key in options){
@@ -51,3 +51,5 @@
       loadFromJson();
     }
   };
+  module.Resource = Resource;
+})(window);

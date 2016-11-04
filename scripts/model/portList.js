@@ -1,6 +1,6 @@
 /*portList.js this file controls population of the portfolio list as well as functionality of the portfolio item article preview*/
 /*resource templating logic*/
-
+(function(module){
   /*constructor for PortListItem object*/
   function PortListItem (options){
     for (key in options){
@@ -80,3 +80,5 @@
       };
     });
   };
+  module.PortListItem = PortListItem;
+})(window);
