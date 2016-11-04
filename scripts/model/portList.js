@@ -3,9 +3,9 @@
 (function(module){
   /*constructor for PortListItem object*/
   function PortListItem (options){
-    for (key in options){
+    Object.keys(options).forEach(function(key){
       this[key] = options[key];
-    }
+    }, this);
   };
 
   PortListItem.portListArray = [];
@@ -20,8 +20,10 @@
     inputData.forEach(function(ele){
       PortListItem.portListArray.push(new Resource(ele));
     });
+
     portArticleView.renderObject(PortListItem.portListArray,'div#portArticle', '#portArticle-template');
     portArticleView.renderObject(PortListItem.portListArray,'ul#portList', '#portList-template');
+
     portArticleView.handlePreview();
     portArticleView.handleMainNav();
     portArticleView.populateFilter();
@@ -30,10 +32,10 @@
   };
 
   PortListItem.fetchAll = function() {
-    var loadFromLocal = function(){
+    function loadFromLocal(){
       PortListItem.loadAll(JSON.parse(localStorage.getItem('portListArray')));
     };
-    var loadFromJson = function(){
+    function loadFromJson(){
       $.getJSON('/data/listContainer.json', function(data, message, xhr) {
         localStorage.setItem('listeTag', xhr.getResponseHeader('ETag'));
         localStorage.setItem('portListArray', JSON.stringify(data));

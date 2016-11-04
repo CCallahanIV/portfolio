@@ -2,9 +2,9 @@
 (function(module){
   /*constructor for Resource object*/
   function Resource (options){
-    for (key in options){
+    Object.keys(options).forEach(function(key){
       this[key] = options[key];
-    }
+    }, this);
   };
 
   Resource.resources = [];
@@ -20,14 +20,15 @@
     inputData.forEach(function(ele){
       Resource.resources.push(new Resource(ele));
     });
+
     portArticleView.renderObject(Resource.resources,'div.resourceWrapper > ul','#resList-template');
   };
 
   Resource.fetchAll = function() {
-    var loadFromLocal = function(){
+    function loadFromLocal(){
       Resource.loadAll(JSON.parse(localStorage.getItem('resources')));
     };
-    var loadFromJson = function(){
+    function loadFromJson() {
       $.getJSON('/data/resourceContainer.json', function(data, message, xhr) {
         localStorage.setItem('resourceeTag', xhr.getResponseHeader('ETag'));
         localStorage.setItem('resources', JSON.stringify(data));

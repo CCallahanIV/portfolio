@@ -65,5 +65,6 @@
 
   PortListItem.fetchAll();
   Resource.fetchAll();
+  
   module.portArticleView = portArticleView;
 })(window);
