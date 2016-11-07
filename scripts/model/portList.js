@@ -31,34 +31,6 @@
     portArticleView.renderFunFacts();
   };
 
-  PortListItem.fetchAll = function() {
-    function loadFromLocal(){
-      PortListItem.loadAll(JSON.parse(localStorage.getItem('portListArray')));
-    };
-    function loadFromJson(){
-      $.getJSON('/data/listContainer.json', function(data, message, xhr) {
-        localStorage.setItem('listeTag', xhr.getResponseHeader('ETag'));
-        localStorage.setItem('portListArray', JSON.stringify(data));
-        PortListItem.loadAll(data);
-      });
-    };
-
-    if (localStorage.portListArray) {
-      var xhr = $.ajax(
-        {url: '/data/listContainer.json',
-        type: 'HEAD',
-        success: function(){
-          if(xhr.getResponseHeader('ETag') === localStorage.getItem('listeTag')){
-            loadFromLocal();
-          } else {
-            loadFromJson();
-          }
-        }
-      });
-    } else {
-      loadFromJson();
-    }
-  };
   //return int of with total categories
   PortListItem.uniqueCats = function(){
     return PortListItem.portListArray.map(function(portListItem){

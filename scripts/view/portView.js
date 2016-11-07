@@ -63,8 +63,8 @@
     });
   };
 
-  PortListItem.fetchAll();
-  Resource.fetchAll();
+  fetch.fetchAll('Resource');
+  fetch.fetchAll('PortList');
   
   module.portArticleView = portArticleView;
 })(window);
