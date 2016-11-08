@@ -25,7 +25,6 @@
     portArticleView.renderObject(PortListItem.portListArray,'ul#portList', '#portList-template');
 
     portArticleView.handlePreview();
-    portArticleView.handleMainNav();
     portArticleView.populateFilter();
     portArticleView.handleCatFilter();
     portArticleView.renderFunFacts();

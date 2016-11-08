@@ -17,17 +17,6 @@
     });
   };
 
-  portArticleView.handleMainNav = function(){
-    $('.siteLinks').on('click', '.tab', function(e){
-      e.preventDefault();
-
-      $('.tabContent').hide();
-      $('div[data-tab="' + $(this).text().toLowerCase() + '"]').fadeIn();
-    });
-
-    $('.siteLinks .tab:first').click();
-  };
-
   portArticleView.populateFilter = function(){
     $('.portItem').each(function(){
       var category, optionTag;
@@ -63,8 +52,8 @@
     });
   };
 
-  fetch.fetchAll('Resource');
-  fetch.fetchAll('PortList');
-  
+  Fetch.fetchAll('Resource');
+  Fetch.fetchAll('PortList');
+
   module.portArticleView = portArticleView;
 })(window);

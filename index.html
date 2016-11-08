@@ -46,8 +46,8 @@
           <nav class="siteLinks">
             <div class="icon-menu"><span>NAV</span></div>
             <ul>
-              <li><a class="siteLink tab" href="#">Home</a></li><!--DeleteSpace
-              --><li><a class="siteLink tab" href="#">About</a></li><!--DeleteSpace
+              <li><a class="siteLink tab" href="/">Home</a></li><!--DeleteSpace
+              --><li><a class="siteLink tab" href="/about">About</a></li><!--DeleteSpace
               --><li><a class="siteLink" href="#">Link 3</a></li><!--DeleteSpace
               --><li><a class="siteLink" href="#">Link 4</a></li><!--DeleteSpace
               --><li><nav class="socialLinks">
@@ -60,7 +60,7 @@
     </header>
 
     <section class="mainContent">
-      <div class="tabContent" data-tab="home">
+      <div class="tabContent" id="home">
         <div class="listWrapper">
           <h2>A list of portfolio items.</h2>
           <select id="listCatFilter">
@@ -81,7 +81,7 @@
           </ul>
         </div>
       </div>
-      <div class="tabContent" data-tab="about">
+      <div class="tabContent" id="about">
         <p>ABOOT ME, EH</p>
       </div>
     </section>
@@ -99,6 +99,11 @@
   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
   crossorigin="anonymous"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+  <script src="vendor/scripts/page.js"></script>
+  <!-- CONTROLLER SCRIPTS -->
+  <script src="scripts/controllers/aboutController.js"></script>
+  <script src="scripts/controllers/articleController.js"></script>
+  <script src="scripts/controllers/routes.js"></script>
   <!-- MODEL SCRIPTS -->
   <script src="scripts/model/resource.js"></script>
   <script src="scripts/model/portList.js"></script>

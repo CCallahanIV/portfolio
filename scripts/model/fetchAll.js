@@ -1,11 +1,11 @@
 /*fetchAll.js is a file dedicated to retrieving from data from either the server or from localStorage*/
 (function(module){
-  fetch = {
+  Fetch = {
     'Resource' : Resource,
     'PortList' : PortListItem
   };
 
-  fetch.fetchAll = function(ObjectName) {
+  Fetch.fetchAll = function(ObjectName) {
     function loadFromLocal(){
       fetch[ObjectName].loadAll(JSON.parse(localStorage.getItem(ObjectName + 'Array')));
     };
@@ -13,7 +13,7 @@
       $.getJSON('/data/' + ObjectName + 'Container.json', function(data, message, xhr) {
         localStorage.setItem(ObjectName + 'eTag', xhr.getResponseHeader('ETag'));
         localStorage.setItem(ObjectName + 'Array', JSON.stringify(data));
-        fetch[ObjectName].loadAll(data);
+        Fetch[ObjectName].loadAll(data);
       });
     };
 
@@ -34,5 +34,5 @@
     }
   };
 
-  module.fetch = fetch;
+  module.Fetch = Fetch;
 })(window);
