@@ -18,7 +18,7 @@
 
   PortListItem.loadAll = function(inputData) {
     inputData.forEach(function(ele){
-      PortListItem.portListArray.push(new Resource(ele));
+      PortListItem.portListArray.push(new PortListItem(ele));
     });
 
     portArticleView.renderObject(PortListItem.portListArray,'div#portArticle', '#portArticle-template');

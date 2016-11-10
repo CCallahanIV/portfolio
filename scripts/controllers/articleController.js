@@ -2,8 +2,8 @@
   var articleController = {};
 
   articleController.reveal = function() {
+    $('.tabContent').hide();
     $('#home').fadeIn();
-    $('#about').hide();
   };
 
   module.articleController = articleController;

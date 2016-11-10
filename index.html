@@ -36,6 +36,13 @@
     <script id="funFacts-template" type="text/x-handlebars-template">
       <li>{{category}}: {{numProjects}} Projects</li>
     </script>
+    <script id="repo-template" type="text/x-handlebars-template">
+      <h2><a href="{{url}}">{{name}}</a></h2>
+      <h4>Language: {{language}}</h4>
+      <h6>Created on: {{created_at}}</h6>
+      <h6>Last Updated: {{updated_at}}</h6>
+      <p>{{description}}</p>
+    </script>
 
   </head>
   <body>
@@ -48,7 +55,7 @@
             <ul>
               <li><a class="siteLink tab" href="/">Home</a></li><!--DeleteSpace
               --><li><a class="siteLink tab" href="/about">About</a></li><!--DeleteSpace
-              --><li><a class="siteLink" href="#">Link 3</a></li><!--DeleteSpace
+              --><li><a class="siteLink" href="/repos">Repos</a></li><!--DeleteSpace
               --><li><a class="siteLink" href="#">Link 4</a></li><!--DeleteSpace
               --><li><nav class="socialLinks">
                   <a class="socialLink" href="#"> <img class="socialImgLink" id="fbIcon" src="vendor/images/FB-f-Logo__blue_29.png"/></a>  <a class="socialLink" href="#"><img class="socialImgLink" id="gitIcon" src="vendor/images/GitHub-Mark-Light-32px.png"/></a>
@@ -84,6 +91,9 @@
       <div class="tabContent" id="about">
         <p>ABOOT ME, EH</p>
       </div>
+      <div class="tabContent" id="repos">
+
+      </div>
     </section>
     <footer>
       <h2>Fun Facts:</h2>
@@ -103,14 +113,17 @@
   <!-- CONTROLLER SCRIPTS -->
   <script src="scripts/controllers/aboutController.js"></script>
   <script src="scripts/controllers/articleController.js"></script>
+  <script src="scripts/controllers/repoController.js"></script>
   <script src="scripts/controllers/routes.js"></script>
   <!-- MODEL SCRIPTS -->
   <script src="scripts/model/resource.js"></script>
   <script src="scripts/model/portList.js"></script>
+  <script src="scripts/model/repo.js"></script>
   <script src="scripts/model/fetchAll.js"></script>
   <!-- VIEW SCRIPTS -->
   <script src="scripts/view/nav.js"></script>
   <script src="scripts/view/portView.js"></script>
+  <script src="scripts/view/repoView.js"></script>
   <script src="scripts/view/renderObject.js"></script>
   <script src="scripts/view/funFacts.js"></script>
   </body>
