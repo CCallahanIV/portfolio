@@ -5,10 +5,11 @@
   var repoCompiler = Handlebars.compile($('#repo-template').text());
 
   repoView.renderRepos = function(){
-    $('#repos').empty().append(reposObj.allRepos.map(repoCompiler));
+    console.log('rendering');
+    $('#repos').empty().append(RepoObj.allRepos.map(repoCompiler));
   };
 
-  reposObj.requestRepos(repoView.renderRepos);
+  RepoObj.requestRepos(repoView.renderRepos);
 
   module.repoView = repoView;
 })(window);

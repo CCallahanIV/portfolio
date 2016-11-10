@@ -2,7 +2,7 @@
 (function(module) {
   var repoController = {};
 
-  articleController.reveal = function() {
+  repoController.reveal = function() {
     $('.tabContent').hide();
     $('#repos').fadeIn();
   };
