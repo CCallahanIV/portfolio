@@ -5,7 +5,6 @@
   var repoCompiler = Handlebars.compile($('#repo-template').text());
 
   repoView.renderRepos = function(){
-    console.log('rendering');
     $('#repos').empty().append(RepoObj.allRepos.map(repoCompiler));
   };
 

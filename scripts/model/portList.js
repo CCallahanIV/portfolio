@@ -20,7 +20,6 @@
     inputData.forEach(function(ele){
       PortListItem.portListArray.push(new PortListItem(ele));
     });
-    console.log('rendering portlist');
     portArticleView.renderObject(PortListItem.portListArray,'div#portArticle', '#portArticle-template');
     portArticleView.renderObject(PortListItem.portListArray,'ul#portList', '#portList-template');
 

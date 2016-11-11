@@ -21,7 +21,6 @@
     inputData.forEach(function(ele){
       Resource.resources.push(new Resource(ele));
     });
-    console.log('rendering resources');
     portArticleView.renderObject(Resource.resources,'div.resourceWrapper > ul','#resList-template');
   };
 

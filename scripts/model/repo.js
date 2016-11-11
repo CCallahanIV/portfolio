@@ -6,7 +6,6 @@
   RepoObj.requestRepos = function(callback) {
     $.when(
       $.get('/github/users/ccallahaniv/repos', function(data){
-        console.log('getting');
         RepoObj.allRepos = data;
       })
     ).done(callback);

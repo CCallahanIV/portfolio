@@ -8,6 +8,4 @@ portArticleView.renderFunFacts = function() {
   PortListItem.numCats().forEach(function(ele){
     $('#funFacts').append(factsRender(ele));
   });
-  console.log(PortListItem.numCats());
-
 };
