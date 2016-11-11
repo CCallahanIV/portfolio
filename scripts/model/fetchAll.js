@@ -7,7 +7,7 @@
 
   Fetch.fetchAll = function(ObjectName) {
     function loadFromLocal(){
-      fetch[ObjectName].loadAll(JSON.parse(localStorage.getItem(ObjectName + 'Array')));
+      Fetch[ObjectName].loadAll(JSON.parse(localStorage.getItem(ObjectName + 'Array')));
     };
     function loadFromJson(){
       $.getJSON('/data/' + ObjectName + 'Container.json', function(data, message, xhr) {
