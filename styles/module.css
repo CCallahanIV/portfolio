@@ -116,6 +116,26 @@
   margin: auto;
 }
 
+.tabContent{
+  width: 100%;
+  padding: 10px;
+}
+
+#repos{
+  padding-top: 60px;
+  paddint-bottom: 60px;
+}
+
+.repoArticle{
+  width: 90%;
+  margin: auto;
+  margin-top: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  box-shadow: 6px 10px 10px 2px orange;
+}
+
 @media screen and (min-width: 760px){
 
   .navWrap{

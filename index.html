@@ -37,11 +37,13 @@
       <li>{{category}}: {{numProjects}} Projects</li>
     </script>
     <script id="repo-template" type="text/x-handlebars-template">
-      <h2 class="repoTitle"><a href="{{url}}">{{name}}</a></h2>
-      <h4>Language: {{language}}</h4>
-      <h6>Created on: {{created_at}}</h6>
-      <h6>Last Updated: {{updated_at}}</h6>
-      <p>{{description}}</p>
+      <div class="repoArticle">
+        <h2 class="repoTitle"><a href="{{url}}">{{name}}</a></h2>
+        <h4>Language: {{language}}</h4>
+        <h6>Created on: {{created_at}}</h6>
+        <h6>Last Updated: {{updated_at}}</h6>
+        <p>{{description}}</p>
+      </div>
     </script>
 
   </head>
@@ -92,7 +94,7 @@
         <p>ABOOT ME, EH</p>
       </div>
       <div class="tabContent" id="repos">
-
+        
       </div>
     </section>
     <footer>
