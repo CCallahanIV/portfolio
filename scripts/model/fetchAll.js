@@ -10,14 +10,14 @@
       Fetch[ObjectName].loadAll(JSON.parse(localStorage.getItem(ObjectName + 'Array')));
     };
     function loadFromJson(){
-      $.getJSON('/data/' + ObjectName + 'Container.json', function(data, message, xhr) {
+      $.getJSON('data/' + ObjectName + 'Container.json', function(data, message, xhr) {
         localStorage.setItem(ObjectName + 'eTag', xhr.getResponseHeader('ETag'));
         localStorage.setItem(ObjectName + 'Array', JSON.stringify(data));
         Fetch[ObjectName].loadAll(data);
       });
     };
 
-    if (localStorage.portListArray) {
+    if (localStorage[ObjectName + 'Array']) {
       var xhr = $.ajax(
         {url: '/data/' + ObjectName + 'Container.json',
         type: 'HEAD',
