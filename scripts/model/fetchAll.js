@@ -1,7 +1,7 @@
 /*fetchAll.js is a file dedicated to retrieving from data from either the server or from localStorage*/
 (function(module){
   Fetch = {
-    'Resource' : Resource,
+    'Resource2' : Resource,
     'PortList' : PortListItem
   };
 

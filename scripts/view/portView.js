@@ -52,7 +52,7 @@
     });
   };
 
-  Fetch.fetchAll('Resource');
+  Fetch.fetchAll('Resource2');
   Fetch.fetchAll('PortList');
 
   module.portArticleView = portArticleView;
